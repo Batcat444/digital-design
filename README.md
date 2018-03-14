@@ -35,7 +35,6 @@ function circleEyes(){//This function was made by Mathew.
   penRGB(255,255,255);
   dot(5);
 }
-//This function makes the hero rectangle man.
 function makeRectangleMan(){//This function was made by Mathew.
   penUp();
   moveTo(300, 350);
@@ -62,6 +61,22 @@ function makeRectangleMan(){//This function was made by Mathew.
   moveTo(290, 376);
   penDown();
   moveForward();
+  penUp();
+  moveTo(239, 317);
+  turnTo(270);
+  penDown();
+  penRGB(0,0,40);
+  moveForward(25);
+  turnRight(35);
+  moveForward();
+  turnTo(360);
+  penRGB(203,128,13);
+  moveForward(20);
+  penRGB(230,230,230);
+  for (var s = 25; s>0; s--){//this for loop is used so I can make the knife have a point.
+    penWidth(s);
+    moveForward(2);
+  }
 }
 //This function makes a rectangle specificaly used for rectangle man's head and body.
 function makeRectangle(length, width){//This function was made by Mathew.
