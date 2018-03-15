@@ -4,7 +4,9 @@ This is for the digital design project.
 hide();
 makeCircleGuy();
 makeRectangleMan();
+
 //This is used to make the man named circle guy.
+
 function makeCircleGuy(){//This function was made by Mathew.
 penUp();
 moveTo(39,340);
@@ -23,8 +25,26 @@ penRGB(250,0,0);
 penDown();
 moveForward(50);
 circleEyes();
+penUp();
+moveTo(55, 327);
+penRGB(125,0,0);
+penWidth(15);
+penDown();
+moveForward();
+turnLeft(35);
+moveForward();
+turnTo(360);
+penRGB(203,128,13);
+moveForward();
+penRGB(230,230,230);
+ for (var s = 25; s>0; s--){//this for loop is used so I can make the knife have a point.
+    penWidth(s);
+    moveForward(2);
+  }
 }
+
 //This function is used to make the eyes of circle man.
+
 function circleEyes(){//This function was made by Mathew.
   penUp();
   moveTo(48, 302);
@@ -35,6 +55,7 @@ function circleEyes(){//This function was made by Mathew.
   penRGB(255,255,255);
   dot(5);
 }
+
 function makeRectangleMan(){//This function was made by Mathew.
   penUp();
   moveTo(300, 350);
@@ -78,7 +99,9 @@ function makeRectangleMan(){//This function was made by Mathew.
     moveForward(2);
   }
 }
+
 //This function makes a rectangle specificaly used for rectangle man's head and body.
+
 function makeRectangle(length, width){//This function was made by Mathew.
  for (var i = 0; i < 4; i++){
   moveForward(length);
