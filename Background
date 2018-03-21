@@ -1,0 +1,52 @@
+drawBackground();//This calls the funciton that draws the background
+
+function drawBackground() {//This brings all the functoins together to make the complete background
+  makeGround();
+  moveTo(randomNumber(0,320),randomNumber(0,245));
+  for (var i = 0; i < 4; i++) {
+    penUp();
+    moveTo(randomNumber(0,320),randomNumber(0,200));
+    penDown();
+    makeCloud();
+    penUp();
+    
+  }
+  sun();
+}
+function makeGround() {//This function makes the ground
+  penDown();
+  penRGB(0,191,255,1);
+  dot(350);
+  penWidth(25);
+  moveTo(0, 400);
+  penColor("green");
+  moveTo(320,400);
+  moveTo(320, 450);
+  penRGB(139, 69, 19);
+  penWidth(100);
+  moveTo(0,450);
+  penUp();
+}
+
+
+function makeCloud() {//This function makes the clouds appear in random places
+  penRGB(255,255,255);
+  penDown();
+for (var i = 0; i < 2; i++) {
+    dot(randomNumber(30, 40));
+    penUp();
+    move(randomNumber(15,30 ), randomNumber(15, 30) );
+    penDown();
+    
+  }
+}
+
+function sun () {//This makes the sun in the top right corner
+moveTo(320, 0);
+penRGB(255,255,1);
+dot(70);
+turnTo(102.5);
+for (var i = 0; i < 4; i++) {
+  arcRight(90, 25);
+}
+}
