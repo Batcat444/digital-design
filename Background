@@ -1,13 +1,14 @@
 drawBackground();//This calls the funciton that draws the background
 
 function drawBackground() {//This brings all the functoins together to make the complete background
+  hide();//This hides the turtle
   makeGround();
   moveTo(randomNumber(0,320),randomNumber(0,245));
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 4; i++) {//This randomly places the function makeCloud and repeats it 4 times
     penUp();
     moveTo(randomNumber(0,320),randomNumber(0,200));
     penDown();
-    makeCloud();
+    makeCloud(45);
     penUp();
     
   }
@@ -29,11 +30,11 @@ function makeGround() {//This function makes the ground
 }
 
 
-function makeCloud() {//This function makes the clouds appear in random places
+function makeCloud(size) {//This function makes the clouds sizes and also how far it moves before it makes another dot
   penRGB(255,255,255);
   penDown();
 for (var i = 0; i < 2; i++) {
-    dot(randomNumber(30, 40));
+    dot(randomNumber(30, size));
     penUp();
     move(randomNumber(15,30 ), randomNumber(15, 30) );
     penDown();
