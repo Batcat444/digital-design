@@ -99,6 +99,15 @@ function makeRectangleMan(){//This function was made by Mathew.
     moveForward(2);
   }
 }
+//This function makes a rectangle specificaly used for rectangle man's head and body.
+function makeRectangle(length, width){//This function was made by Mathew.
+ for (var i = 0; i < 4; i++){
+  moveForward(length);
+  turnLeft();
+  moveForward(width);
+  turnLeft();
+ }
+}
 
 //This function makes a rectangle specificaly used for rectangle man's head and body.
 
